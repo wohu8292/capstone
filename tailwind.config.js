@@ -7,10 +7,12 @@ export default {
   theme: {
     extend: {
       colors:{
-        primaryGold: 'rgb(207, 184, 124)',
-        secondaryGold: 'rgb(141, 115, 52)',
-        primaryDarkgray: 'rgb(86, 90, 92)',
-        primaryLightGray: 'rgb(162, 164, 163)',
+        first_color: 'rgb(105, 140, 70)',
+        second_color: 'rgb(92, 115, 70)',
+        third_color: 'rgb(189, 217, 130)',
+        fourth_color: 'rgb(237, 242, 194)',
+        fifth_color: 'rgb(64, 39, 30)',
+
       },
 
         fontFamily: {

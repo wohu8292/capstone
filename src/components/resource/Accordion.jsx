@@ -3,7 +3,7 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 
 const items = [
   { title: "Basic Needs Center", category: "Brainstorming", location: "On Campus", link: "#", description: "Essential resources for what you need the most" },
-  { title: "Distribution Center", category: "Brainstorming", location: "On Campus", link: "#", description: " CU Boulders material managemnt" },
+  { title: "Distribution Center", category: "Brainstorming", location: "On Campus", link: "#", description: "CU Boulders material management" },
   { title: "Environmental Center", category: "Brainstorming", location: "On Campus", link: "#", description: "Main sustainability CU resource" },
   { title: "Grounds Recycling Operations", category: "Brainstorming", location: "On Campus", link: "#", description: "Recycling resource CU Boulder " },
   { title: "Boulder Sports Recycler", category: "Brainstorming", location: "In Boulder", link: "#", description: "A sports thrift store" },
@@ -55,7 +55,7 @@ const Accordion = () => {
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 text-sm sm:text-base rounded-md font-semibold transition ${
-                selectedCategory === category ? "bg-primaryGold text-black" : "bg-gray-800 text-white"
+                selectedCategory === category ? "bg-third_color text-black" : "bg-gray-800 text-white"
               }`}
             >
               {category}
@@ -79,14 +79,14 @@ const Accordion = () => {
                   <div key={locationKey} className="border border-yellow-500 rounded-md mt-2 bg-gray-100">
                     <button
                       onClick={() => toggleAccordion(locationKey)}
-                      className="w-full flex justify-between items-center px-4 sm:px-6 py-2 bg-primaryGold text-black font-bold text-base sm:text-lg"
+                      className="w-full flex justify-between items-center px-4 sm:px-6 py-2 bg-third_color text-black font-bold text-base sm:text-lg"
                     >
                       <span className="flex-1 text-left">{location}</span>
                       {openIndexes[locationKey] ? <FiMinus size={22} /> : <FiPlus size={22} />}
                     </button>
                     <div
-                      className={`overflow-hidden transition-[max-height] ease-in-out duration-300 ${
-                        openIndexes[locationKey] ? "max-h-96 p-4 sm:p-6" : "max-h-0 p-0"
+                      className={`overflow-hidden transition-all ease-in-out duration-500 ${
+                        openIndexes[locationKey] ? "max-h-[400px] p-4 sm:p-6" : "max-h-0 p-0"
                       }`}
                     >
                       <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3">

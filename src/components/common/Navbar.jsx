@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 const navLinks = [
   { name: "Home", path: "/capstone" },
@@ -18,35 +19,19 @@ const navLinks = [
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(null);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={`bg-gray-900 text-white py-4 w-full fixed top-0 left-0 z-50 transition-all ${
-        isScrolled ? "shadow-md bg-opacity-90" : "bg-opacity-100"
-      }`}
-    >
+    <nav className="bg-black text-green-500 py-4 w-full fixed top-0 left-0 z-50">
       <div className="container mx-auto flex items-center justify-between px-6 max-w-6xl">
-        
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-green-500 text-2xl"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Left side navigation (Desktop) */}
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden md:flex space-x-10 text-sm uppercase">
           {navLinks.slice(0, 2).map((link, index) => (
             <div key={index} className="relative">
               {link.dropdown ? (
@@ -55,17 +40,17 @@ const Navbar = () => {
                     onClick={() =>
                       setIsDropdownOpen(isDropdownOpen === index ? null : index)
                     }
-                    className="flex items-center gap-1 hover:text-gray-400"
+                    className="flex items-center gap-1 hover:text-green-300"
                   >
                     {link.name} <FaChevronDown size={12} />
                   </button>
                   {isDropdownOpen === index && (
-                    <div className="absolute left-0 mt-2 bg-white text-black shadow-md rounded-md w-40">
+                    <div className="absolute left-0 mt-2 bg-black text-green-500 shadow-md rounded-md w-40 border border-green-500">
                       {link.dropdown.map((item, i) => (
                         <NavLink
                           key={i}
                           to={item.path}
-                          className="block px-4 py-2 hover:bg-gray-200"
+                          className="block px-4 py-2 hover:bg-green-800 rounded"
                           onClick={() => setIsDropdownOpen(null)}
                         >
                           {item.name}
@@ -78,7 +63,7 @@ const Navbar = () => {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    isActive ? "text-gray-400 font-semibold" : "hover:text-gray-400"
+                    isActive ? "text-green-300 font-semibold" : "hover:text-green-300"
                   }
                 >
                   {link.name}
@@ -88,21 +73,17 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Centered Logo */}
         <div className="flex-shrink-0">
-          <div className="w-16 h-16 bg-gray-500 flex items-center justify-center rounded-full">
-            {/* Insert Logo Here */}
-          </div>
+          <img src={logo} alt="Reduce by Reuse" className="w-32 h-auto" /> {/* Increased logo size */}
         </div>
 
-        {/* Right side navigation (Desktop) */}
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden md:flex space-x-10 text-sm uppercase">
           {navLinks.slice(2).map((link, index) => (
             <NavLink
               key={index}
               to={link.path}
               className={({ isActive }) =>
-                isActive ? "text-gray-400 font-semibold" : "hover:text-gray-400"
+                isActive ? "text-green-300 font-semibold" : "hover:text-green-300"
               }
             >
               {link.name}
@@ -111,9 +92,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-gray-800 text-white py-4 shadow-md">
+        <div className="md:hidden absolute top-full left-0 w-full bg-black text-green-500 py-4 shadow-md">
           <div className="flex flex-col space-y-4 text-center">
             {navLinks.map((link, index) => (
               <div key={index} className="relative">
@@ -123,17 +103,17 @@ const Navbar = () => {
                       onClick={() =>
                         setIsDropdownOpen(isDropdownOpen === index ? null : index)
                       }
-                      className="flex items-center justify-center gap-1 w-full py-2 hover:text-gray-400"
+                      className="flex items-center justify-center gap-1 w-full py-2 hover:text-green-300"
                     >
                       {link.name} <FaChevronDown size={12} />
                     </button>
                     {isDropdownOpen === index && (
-                      <div className="bg-gray-700 text-white py-2">
+                      <div className="bg-black text-green-500 py-2 border border-green-500">
                         {link.dropdown.map((item, i) => (
                           <NavLink
                             key={i}
                             to={item.path}
-                            className="block px-4 py-2 hover:bg-gray-600"
+                            className="block px-4 py-2 hover:bg-green-800 rounded"
                             onClick={() => {
                               setIsDropdownOpen(null);
                               setIsMobileMenuOpen(false);
@@ -148,7 +128,7 @@ const Navbar = () => {
                 ) : (
                   <NavLink
                     to={link.path}
-                    className="block py-2 hover:text-gray-400"
+                    className="block py-2 hover:text-green-300"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}

@@ -3,7 +3,7 @@ import Accordion from './Accordion'
 
 const Resources = () => {
   return (
-    <div className='section'>
+    <div className='section bg-black'>
         <Accordion/>
     </div>
   )

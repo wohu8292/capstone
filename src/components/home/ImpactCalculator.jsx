@@ -7,7 +7,7 @@ const materials = {
   "Metal": { carbon: 2.5, waste: 4 },
 };
 
-const MaterialImpactCalculator = () => {
+const ImpactCalculator = () => {
   const [selectedMaterial, setSelectedMaterial] = useState("Recycled Paper");
   const [quantity, setQuantity] = useState(1);
   const [impact, setImpact] = useState({ carbon: 0.5, waste: 2 });
@@ -21,7 +21,7 @@ const MaterialImpactCalculator = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md mt-10">
+    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md mt-10 text-black">
       <h2 className="text-xl font-bold mb-4">Material Impact Calculator</h2>
       <label className="block text-sm font-medium text-gray-700">Select Material:</label>
       <select
@@ -56,4 +56,4 @@ const MaterialImpactCalculator = () => {
   );
 };
 
-export default MaterialImpactCalculator;
+export default ImpactCalculator;

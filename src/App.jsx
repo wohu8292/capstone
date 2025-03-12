@@ -7,6 +7,7 @@ import TakeAnOath from './components/oath/TakeAnOath';
 import Resources from './components/resource/Resources';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from './components/common/Footer';
 
 
 const App = () => {
@@ -14,11 +15,12 @@ const App = () => {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/capstone" element={<Home />} />
         <Route path="/design" element={<Design />} />
         <Route path="/take-an-oath" element={<TakeAnOath />} />
         <Route path="/resources" element={<Resources />} />
       </Routes>
+      <Footer/>
     </Router>
     
   )
