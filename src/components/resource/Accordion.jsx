@@ -46,9 +46,9 @@ const Accordion = () => {
   );
 
   return (
-    <div className="max-w-screen-lg mx-auto font-arimo px-4 sm:px-6 lg:px-8 pt-8">
+    <div className="max-w-screen-md mx-auto font-arimo px-6 sm:px-8 lg:px-10 pt-16">
       {/* Category Bar */}
-      <div className="border border-third_color p-3 mb-4">
+      <div className="border border-third_color p-3 mb-5">
         <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4">
           {categories.map((category) => (
             <button
@@ -70,39 +70,39 @@ const Accordion = () => {
           (selectedCategory === "All" || selectedCategory === category) &&
           filteredItems.some((item) => item.category === category) && (
             <div key={category} className="mb-6">
-              <h3 className="text-lg sm:text-xl font-bold text-white px-4 py-2 sm:px-6 sm:py-3 rounded-md">
+              <h3 className="text-base sm:text-lg font-semibold text-white px-4 py-2 sm:px-6 sm:py-3 rounded-md">
                 {category}
               </h3>
               {locations.map((location) => {
                 const locationKey = `${category}-${location}`;
                 return (
-                  <div key={locationKey} className="rounded-md mt-2 bg-gray-100">
+                  <div key={locationKey} className="rounded-md mt-3 bg-gray-100">
                     <button
                       onClick={() => toggleAccordion(locationKey)}
-                      className="w-full flex justify-between items-center px-4 sm:px-6 py-2 bg-third_color text-black font-bold text-base sm:text-lg"
+                      className="w-full flex justify-between items-center px-4 sm:px-6 py-3 bg-third_color text-black font-semibold text-lg"
                     >
                       <span className="flex-1 text-left">{location}</span>
-                      {openIndexes[locationKey] ? <FiMinus size={22} /> : <FiPlus size={22} />}
+                      {openIndexes[locationKey] ? <FiMinus size={24} /> : <FiPlus size={24} />}
                     </button>
                     <div
-                      className={`overflow-hidden transition-all ease-in-out duration-500 ${
-                        openIndexes[locationKey] ? "max-h-[400px] p-4 sm:p-6" : "max-h-0 p-0"
+                      className={`overflow-hidden transition-all ease-in-out duration-300 ${
+                        openIndexes[locationKey] ? "max-h-[400px] p-5 sm:p-6" : "max-h-0 p-0"
                       }`}
                     >
-                      <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3">
+                      <ul className="list-disc pl-5 sm:pl-6 space-y-2 sm:space-y-3">
                         {filteredItems
                           .filter((item) => item.category === category && item.location === location)
                           .map((item, idx) => (
-                            <li key={idx} className="break-words">
+                            <li key={idx} className="break-words text-sm sm:text-base">
                               <a
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-blue-600 hover:underline text-base sm:text-lg"
+                                className="text-blue-600 hover:underline"
                               >
                                 {item.title}
                               </a>
-                              <p className="text-sm sm:text-base text-gray-700">{item.description}</p>
+                              <p className="text-xs sm:text-sm text-gray-700">{item.description}</p>
                             </li>
                           ))}
                       </ul>
