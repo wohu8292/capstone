@@ -9,14 +9,6 @@ const VideoPlayer = ({ videoUrl, title, onButtonClick, buttonText = "Action" }) 
         <source src={videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
-      {/* Button below the video with margin for spacing */}
-      <button 
-        className="mt-4 bg-blue-500 text-white px-4 py-2 text-sm rounded-md shadow-md hover:bg-blue-600 transition"
-        onClick={onButtonClick}
-      >
-        {buttonText}
-      </button>
     </div>
   </div>
 );

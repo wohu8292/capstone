@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
@@ -9,7 +9,7 @@ const navLinks = [
     name: "Design",
     path: "/design",
     dropdown: [
-      { name: "Option 1", path: "/design/option1" },
+      { name: "Quiz", path: "/design/option1" },
       { name: "Option 2", path: "/design/option2" },
     ],
   },
@@ -18,7 +18,6 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -33,31 +32,24 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-10 text-sm uppercase">
           {navLinks.slice(0, 2).map((link, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative group">
               {link.dropdown ? (
                 <>
-                  <button
-                    onClick={() =>
-                      setIsDropdownOpen(isDropdownOpen === index ? null : index)
-                    }
-                    className="flex items-center gap-1 hover:text-green-300"
-                  >
+                  <button className="flex items-center gap-1 hover:text-green-300">
                     {link.name} <FaChevronDown size={12} />
                   </button>
-                  {isDropdownOpen === index && (
-                    <div className="absolute left-0 mt-2 bg-black text-green-500 shadow-md rounded-md w-40 border border-green-500">
-                      {link.dropdown.map((item, i) => (
-                        <NavLink
-                          key={i}
-                          to={item.path}
-                          className="block px-4 py-2 hover:bg-green-800 rounded"
-                          onClick={() => setIsDropdownOpen(null)}
-                        >
-                          {item.name}
-                        </NavLink>
-                      ))}
-                    </div>
-                  )}
+                  {/* Dropdown Menu */}
+                  <div className="absolute left-0 mt-2 bg-black text-green-500 shadow-md rounded-md w-40 border border-green-500 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 delay-75">
+                    {link.dropdown.map((item, i) => (
+                      <NavLink
+                        key={i}
+                        to={item.path}
+                        className="block px-4 py-2 hover:bg-green-800 rounded"
+                      >
+                        {item.name}
+                      </NavLink>
+                    ))}
+                  </div>
                 </>
               ) : (
                 <NavLink
@@ -74,7 +66,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex-shrink-0">
-          <img src={logo} alt="Reduce by Reuse" className="w-32 h-auto" /> {/* Increased logo size */}
+          <img src={logo} alt="Reduce by Reuse" className="w-32 h-auto" />
         </div>
 
         <div className="hidden md:flex space-x-10 text-sm uppercase">
@@ -100,30 +92,25 @@ const Navbar = () => {
                 {link.dropdown ? (
                   <>
                     <button
-                      onClick={() =>
-                        setIsDropdownOpen(isDropdownOpen === index ? null : index)
-                      }
                       className="flex items-center justify-center gap-1 w-full py-2 hover:text-green-300"
                     >
                       {link.name} <FaChevronDown size={12} />
                     </button>
-                    {isDropdownOpen === index && (
-                      <div className="bg-black text-green-500 py-2 border border-green-500">
-                        {link.dropdown.map((item, i) => (
-                          <NavLink
-                            key={i}
-                            to={item.path}
-                            className="block px-4 py-2 hover:bg-green-800 rounded"
-                            onClick={() => {
-                              setIsDropdownOpen(null);
-                              setIsMobileMenuOpen(false);
-                            }}
-                          >
-                            {item.name}
-                          </NavLink>
-                        ))}
-                      </div>
-                    )}
+                    {/* Mobile Dropdown */}
+                    <div className="bg-black text-green-500 py-2 border border-green-500">
+                      {link.dropdown.map((item, i) => (
+                        <NavLink
+                          key={i}
+                          to={item.path}
+                          className="block px-4 py-2 hover:bg-green-800 rounded"
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                          }}
+                        >
+                          {item.name}
+                        </NavLink>
+                      ))}
+                    </div>
                   </>
                 ) : (
                   <NavLink

@@ -1,11 +1,8 @@
 import React from 'react'
-import exampleImg from "../assets/e.jpg";
 
 import Banner from "./Banner"
 import VideoPlayer from "./VideoPlayer"
 import ImageSlider from "./ImageSlider"
-import CardGrid from './CardGrid';
-import ImpactCalculator from './ImpactCalculator';
 
 const Home = () => {
     return (
@@ -18,11 +15,8 @@ const Home = () => {
                 <div className='py-12 my-12'>
                     <ImageSlider/>
                 </div>
-                <div className='py-12 my-12'>
+                <div className='py-16 mt-12'>
                     <VideoPlayer title="Learn more about e-waste"/>
-                </div>
-                <div className='py-12 my-12'>
-                    <ImpactCalculator/>
                 </div>
             </div>
         </div>

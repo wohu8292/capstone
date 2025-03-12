@@ -8,6 +8,7 @@ import Resources from './components/resource/Resources';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from './components/common/Footer';
+import Quiz from './components/design/Quiz';
 
 
 const App = () => {
@@ -17,6 +18,8 @@ const App = () => {
       <Routes>
         <Route path="/capstone" element={<Home />} />
         <Route path="/design" element={<Design />} />
+        <Route path="/design/option1" element={<Quiz />} />
+        <Route path="/design/option2" element={<Design />} />
         <Route path="/take-an-oath" element={<TakeAnOath />} />
         <Route path="/resources" element={<Resources />} />
       </Routes>

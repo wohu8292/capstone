@@ -1,23 +1,27 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import animatedLogo from "../assets/animatedLogo.mp4"; // Import your video file
 
 const Banner = () => {
   return (
     <div className="max-w-screen-lg mx-auto font-arimo px-4 sm:px-6 lg:px-8 pt-8">
       {/* Banner Container */}
       <div className="p-6 sm:p-8 text-center">
-        {/* Logo Image */}
+        {/* Video */}
         <div className="mb-6">
-          <img
-            src={logo} // Replace with your image path
-            alt="Banner Logo"
-            className="w-32 h-32 sm:w-96 sm:h-96 mx-auto object-contain "
+          <video
+            src={animatedLogo} // Replace with your video path
+            alt="Banner Video"
+            className="w-full sm:w-128 sm:h-128 mx-auto object-contain" // Increased size
+            autoPlay
+            loop
+            muted
           />
         </div>
 
         {/* Paragraph */}
         <p className="text-base sm:text-lg mb-6">
-            Reduce by reuse is a resource for sustainable projects. this is the place to learn more about eco-friendly, sustainable physical Projects.        </p>
+          Reduce by reuse is a resource for sustainable projects. This is the place to learn more about eco-friendly, sustainable physical projects.
+        </p>
 
         {/* Button */}
         <button className="px-6 py-2 bg-third_color text-black font-bold rounded-md transition hover:bg-yellow-400">
