@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black border border-yellow-500 p-12 mt-0"> {/* Removed margin-top */}
+    <footer className="bg-black border border-third_color p-12 mt-0"> {/* Removed margin-top */}
       <div className="max-w-screen-lg mx-auto flex justify-between items-center">
         {/* Logo */}
         <div>

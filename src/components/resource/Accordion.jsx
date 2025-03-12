@@ -48,7 +48,7 @@ const Accordion = () => {
   return (
     <div className="max-w-screen-lg mx-auto font-arimo px-4 sm:px-6 lg:px-8 pt-8">
       {/* Category Bar */}
-      <div className="border border-yellow-500 rounded-md p-3 mb-4">
+      <div className="border border-third_color p-3 mb-4">
         <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4">
           {categories.map((category) => (
             <button
@@ -70,13 +70,13 @@ const Accordion = () => {
           (selectedCategory === "All" || selectedCategory === category) &&
           filteredItems.some((item) => item.category === category) && (
             <div key={category} className="mb-6">
-              <h3 className="text-lg sm:text-xl font-bold text-primaryGold bg-gray-800 px-4 py-2 sm:px-6 sm:py-3 rounded-md">
+              <h3 className="text-lg sm:text-xl font-bold text-white px-4 py-2 sm:px-6 sm:py-3 rounded-md">
                 {category}
               </h3>
               {locations.map((location) => {
                 const locationKey = `${category}-${location}`;
                 return (
-                  <div key={locationKey} className="border border-yellow-500 rounded-md mt-2 bg-gray-100">
+                  <div key={locationKey} className="rounded-md mt-2 bg-gray-100">
                     <button
                       onClick={() => toggleAccordion(locationKey)}
                       className="w-full flex justify-between items-center px-4 sm:px-6 py-2 bg-third_color text-black font-bold text-base sm:text-lg"
