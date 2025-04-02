@@ -11,10 +11,11 @@ const navLinks = [
     dropdown: [
       { name: "Quiz", path: "/design/option1" },
       { name: "RotatingClcok", path: "/design/option2" },
+      { name: "Guideline", path: "/guideline"}
     ],
   },
   { name: "Take an Oath", path: "/take-an-oath" },
-  { name: "Resources", path: "/resources" },
+  { name: "Resource", path: "/resource" },
 ];
 
 const Navbar = () => {

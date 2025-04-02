@@ -3,43 +3,53 @@ import React, { useState } from "react";
 const Quiz = () => {
   const questions = [
     {
-      question: "What role do students play in promoting environmental sustainability?",
+      question: "What should you do with used batteries on campus?",
       options: [
-        "Choosing products with minimal packaging",
-        "Supporting companies with strong environmental policies",
-        "Reducing energy consumption at home",
-        "All of the above",
+        "Throw them in the trash",
+        "Recycle them in designated battery collection bins",
+        "Leave them in classroom drawers",
+        "Put them in regular recycling bins"
       ],
-      answer: "All of the above",
-      explanation: "Students can make a big impact by choosing eco-friendly options, supporting sustainable businesses, and reducing energy consumption at home.",
-      category: "Environmental Sustainability",
+      answer: "Recycle them in designated battery collection bins",
+      explanation: "Batteries must be taken to specific collection points to prevent hazardous waste contamination.",
+      category: "Hazardous Waste"
     },
     {
-      question: "What is the main cause of global warming?",
+      question: "Which of the following items can be composted at CU Boulder?",
       options: [
-        "Deforestation",
-        "Overfishing",
-        "Burning of fossil fuels",
-        "Recycling waste",
+        "Meat and dairy products",
+        "Plastic utensils",
+        "Compostable paper products and food scraps",
+        "Aluminum foil"
       ],
-      answer: "Burning of fossil fuels",
-      explanation:
-        "Burning fossil fuels releases carbon dioxide (CO2) into the atmosphere, which traps heat and contributes to global warming.",
-      category: "Climate Change",
+      answer: "Compostable paper products and food scraps",
+      explanation: "Only certified compostable items like food scraps and compostable paper can go in compost bins.",
+      category: "Composting"
     },
     {
-      question: "What is the best way to reduce plastic waste?",
+      question: "What should you do with empty coffee cups at CU Boulder?",
       options: [
-        "Using reusable bags and bottles",
-        "Recycling all plastic",
-        "Incinerating plastic",
-        "Using more single-use plastic products",
+        "Throw them in the compost bin",
+        "Recycle them in the paper bin",
+        "Dispose of them in the landfill trash bin",
+        "Wash and reuse them"
       ],
-      answer: "Using reusable bags and bottles",
-      explanation:
-        "Using reusable bags and bottles is the most effective way to reduce plastic waste and minimize the need for single-use plastics.",
-      category: "Recycling",
+      answer: "Dispose of them in the landfill trash bin",
+      explanation: "Most coffee cups have a plastic lining that makes them non-recyclable and non-compostable.",
+      category: "Waste Management"
     },
+    {
+      question: "How should you dispose of electronics on campus?",
+      options: [
+        "Put them in the landfill bin",
+        "Drop them off at CU Boulder’s electronic waste recycling stations",
+        "Leave them in classrooms for janitors to take care of",
+        "Break them down and throw them in mixed recycling"
+      ],
+      answer: "Drop them off at CU Boulder’s electronic waste recycling stations",
+      explanation: "CU Boulder has designated e-waste collection sites for proper electronic disposal.",
+      category: "E-Waste Recycling"
+    }
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -98,7 +108,7 @@ const Quiz = () => {
                             : option === selectedAnswer
                             ? "bg-red-600 text-white"
                             : "bg-gray-800"
-                          : "bg-gray-800 hover:bg-first_color hover:text-white"
+                          : "bg-gray-800 hover:bg-green-500 hover:text-white"
                       }`}
                   >
                     {option}
@@ -132,7 +142,7 @@ const Quiz = () => {
                 <div
                   className="bg-blue-500 h-2 rounded-full"
                   style={{
-                    width: `${((currentQuestion + 1) / questions.length) * 100}%`,
+                    width: `${((currentQuestion + 1) / questions.length) * 100}%`
                   }}
                 ></div>
               </div>
