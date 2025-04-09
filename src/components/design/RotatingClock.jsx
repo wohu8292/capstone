@@ -49,7 +49,7 @@ const RotatingClock = () => {
   const rotationDegree = (360 / titles.length) * currentIndex;
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-800 to-black text-white flex flex-col items-center justify-center h-full space-y-16 pb-24">
+    <div className="bg-black text-white flex flex-col items-center justify-center h-full space-y-16 pb-24">
       {/* Rotating Clock */}
       <div className="relative w-64 h-64 border-2 border-third_color rounded-full bg-gray-900 shadow-lg mt-64 mb-12">
         <div

@@ -9,8 +9,8 @@ const navLinks = [
     name: "Design",
     path: "/design",
     dropdown: [
-      { name: "Quiz", path: "/design/option1" },
-      { name: "RotatingClcok", path: "/design/option2" },
+      { name: "Knowledge test", path: "/design/option1" },
+      { name: "Process", path: "/design/option2" },
       { name: "Guideline", path: "/guideline"}
     ],
   },
@@ -22,7 +22,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-green-500 py-4 w-full fixed top-0 left-0 z-50">
+    <nav className="bg-black text-third_color py-4 w-full fixed top-0 left-0 z-50">
       <div className="container mx-auto flex items-center justify-between px-6 max-w-6xl">
         <button
           className="md:hidden text-green-500 text-2xl"
@@ -31,7 +31,7 @@ const Navbar = () => {
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        <div className="hidden md:flex space-x-10 text-sm uppercase">
+        <div className="hidden md:flex space-x-10 text-sm">
           {navLinks.slice(0, 2).map((link, index) => (
             <div key={index} className="relative group">
               {link.dropdown ? (
@@ -40,7 +40,7 @@ const Navbar = () => {
                     {link.name} <FaChevronDown size={12} />
                   </button>
                   {/* Dropdown Menu */}
-                  <div className="absolute left-0 mt-2 bg-black text-green-500 shadow-md rounded-md w-40 border border-green-500 opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 delay-75">
+                  <div className="absolute left-0 mt-2 bg-black text-third_color shadow-md rounded-md w-40 border border-third_color opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 delay-75">
                     {link.dropdown.map((item, i) => (
                       <NavLink
                         key={i}
@@ -70,7 +70,7 @@ const Navbar = () => {
           <img src={logo} alt="Reduce by Reuse" className="w-32 h-auto" />
         </div>
 
-        <div className="hidden md:flex space-x-10 text-sm uppercase">
+        <div className="hidden md:flex space-x-10 text-sm">
           {navLinks.slice(2).map((link, index) => (
             <NavLink
               key={index}

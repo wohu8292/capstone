@@ -86,7 +86,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-800 to-black text-white min-h-screen flex items-center justify-center py-64">
+    <div className="bg-black text-white min-h-screen flex items-center justify-center py-64">
       <div className="max-w-md w-full p-6 rounded-lg shadow-2xl bg-gray-900 border border-gray-700">
         {!quizCompleted ? (
           <>

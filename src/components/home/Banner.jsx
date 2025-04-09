@@ -9,9 +9,9 @@ const Banner = () => {
         {/* Video */}
         <div className="mb-6">
           <video
-            src={animatedLogo} // Replace with your video path
+            src={animatedLogo}
             alt="Banner Video"
-            className="w-full sm:w-128 sm:h-128 mx-auto object-contain" // Increased size
+            className="w-full sm:w-128 sm:h-128 mx-auto object-contain"
             autoPlay
             loop
             muted
@@ -24,7 +24,7 @@ const Banner = () => {
         </p>
 
         {/* Button */}
-        <button className="px-6 py-2 bg-third_color text-black font-bold rounded-md transition hover:bg-yellow-400">
+        <button className="px-6 py-2 bg-third_color text-black font-bold rounded-md transition hover:bg-lime-500">
           Resources
         </button>
       </div>

@@ -39,8 +39,8 @@ const ImageSlider = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-10 text-center relative">
-      <h2 className="text-2xl font-extrabold text-lime-300 mb-6">STEPS FOR DOING PROJECTS</h2>
-      <div className="relative bg-white p-6 rounded-md border border-lime-300 shadow-lg">
+      <h2 className="text-2xl font-extrabold text-third_color mb-6">STEPS FOR DOING PROJECTS</h2>
+      <div className="relative bg-white p-6 rounded-md border border-third_color shadow-lg">
         <button
           className="absolute -left-12 top-1/2 transform -translate-y-1/2 text-lime-400 hover:text-lime-500 transition"
           onClick={() => sliderRef.current?.slickPrev()}
@@ -54,7 +54,7 @@ const ImageSlider = () => {
               <h3 className="text-lg font-extrabold mb-2 text-gray-800">{slide.title}</h3>
               <p className="text-sm text-gray-600 mb-5 leading-relaxed">{slide.description}</p>
               {index === 0 && (
-                <button className="bg-lime-400 text-black px-5 py-2 rounded-md font-bold hover:bg-lime-500 transition">
+                <button className="bg-third_color text-black px-5 py-2 rounded-md font-bold hover:bg-lime-500 transition">
                   TAKE AN OATH
                 </button>
               )}
