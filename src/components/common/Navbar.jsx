@@ -9,7 +9,7 @@ const navLinks = [
     name: "Design",
     path: "/design",
     dropdown: [
-      { name: "Knowledge test", path: "/design/option1" },
+      { name: "Challenge", path: "/design/option1" },
       { name: "Process", path: "/design/option2" },
       { name: "Guideline", path: "/guideline"}
     ],

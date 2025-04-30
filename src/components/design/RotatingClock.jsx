@@ -5,9 +5,9 @@ const titles = [
     title: "Deliverable", 
     content: [
       { heading: "What are deliverables?", text: "A deliverable is a tangible or intangible outcome of a project, typically provided to stakeholders. Examples include reports, designs, and prototypes." },
-      { heading: "Tools for deliverables", text: "Common tools include project management software, design tools, and documentation frameworks to ensure smooth development." },
-      { heading: "How to make deliverables more sustainable?", text: "Use eco-friendly materials, digital documents instead of paper, and energy-efficient design processes to minimize waste." },
-      { heading: "How is success defined?", text: "Success is measured by meeting project goals, stakeholder satisfaction, and the impact of the deliverable." },
+      { heading: "Tools for deliverables", text: "Talking with TA’s and Professors about what is expected of you, the syllabus, management software, gantt charts, and documentation." },
+      { heading: "How to make deliverables more sustainable?", text: "Figure out how to get everything your professor needs from you in a sustainable amount of time so you are not pressed for time. Nothing is more unsustainable than making silly mistakes because you are tired, stressed, or the professor is simply telling you to start again because you misunderstood the instructions." },
+      { heading: "How is success defined?", text: "Success is measured by meeting project goals, teacher satisfaction, and an increase for your mental health over the semester." },
     ]
   },
   { 
@@ -15,25 +15,25 @@ const titles = [
     content: [
       { heading: "What is brainstorming?", text: "Brainstorming is a creative process used to generate ideas and solutions through open discussion and free thinking." },
       { heading: "Tools for brainstorming", text: "Popular tools include whiteboards, mind-mapping software, and collaborative digital platforms like Miro and FigJam." },
-      { heading: "How to make brainstorming more effective?", text: "Encourage open participation, avoid immediate criticism, and use structured techniques like SCAMPER or Six Thinking Hats." },
-      { heading: "How is success defined?", text: "Success is defined by the diversity and feasibility of generated ideas and their alignment with project goals." },
+      { heading: "How to make brainstorming more effective?", text: "Choose something that you can get personally involved in. Make sure you would want this project or you know that it won’t get thrown away somewhere at the end of the semester. Make sure the product is easily disassembled and recycled if needed." },
+      { heading: "How is success defined?", text: "You are excited for something you are making or you believe that you can accomplish making this project while not wasting a lot of time, materials, and money. You know what will happen to your project at the end of the semester." },
     ]
   },
   { 
     title: "Prototyping", 
     content: [
       { heading: "What is prototyping?", text: "Prototyping is the process of creating an early model of a product to test concepts, gather feedback, and refine the design." },
-      { heading: "Tools for prototyping", text: "Figma, Adobe XD, Sketch, and low-code platforms help in rapid prototyping and design validation." },
-      { heading: "How to improve prototyping?", text: "Use rapid iterations, test with real users, and focus on functionality over aesthetics in early stages." },
-      { heading: "How is success defined?", text: "A prototype is successful if it effectively communicates the idea and gathers valuable feedback for refinement." },
+      { heading: "Tools for prototyping", text: "This is heavily dependent on the project but whatever is the cheapest easiest materials or websites you can get your hands on. We recommend talking to your professor if there are any concerns." },
+      { heading: "How to improve prototyping?", text: "Use already recycled materials or materials you know you can reuse for other prototypes in the future. Don’t make anything permanent as you will need to redo it at a later date." },
+      { heading: "How is success defined?", text: "Success is defined by understanding what has gone wrong or could be improved. At the same time success is also if the prototype can communicate what your project is about." },
     ]
   },
   { 
     title: "Iteration", 
     content: [
       { heading: "What is iteration?", text: "Iteration is the process of refining and improving a project through repeated cycles of testing and feedback." },
-      { heading: "Tools for iteration", text: "Agile boards, feedback loops, and version control systems help track iterative progress." },
-      { heading: "How to make iteration efficient?", text: "Set clear objectives, gather targeted feedback, and make incremental changes to avoid major setbacks." },
+      { heading: "Tools for iteration", text: "Your own hands, feedback from users, feedback from professors, sleep, and workshops." },
+      { heading: "How to make iteration efficient?", text: "Write down what feedback you have received so you don’t forget it later and make repeating mistakes. Ask for clarification and help when needed. Recording everything you do will help you at the end of the semester. Take notes on what challenges you faced and how you solved them." },
       { heading: "How is success defined?", text: "Success is achieved when improvements enhance functionality, usability, and overall project quality." },
     ]
   },

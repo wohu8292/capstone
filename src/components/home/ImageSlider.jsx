@@ -10,19 +10,19 @@ const ImageSlider = () => {
   const slides = [
     {
       title: "1. Brainstorming",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description: "To make a sustainable project first you need to know what you are going to build, why you are going to build it, what your professor is looking for you to learn, and what is your project's end of life. To benign take an oath to help be sustainable while you build. ",
     },
     {
       title: "2. Prototyping",
-      description: "Set clear objectives and outline the project steps to ensure smooth execution.",
+      description: "Prototyping is how you learn the method to build your project by creating cheap fast versions of your final project. It is a messy method that is unavoidable and will create lots of electronic and regular waste. Don’t worry about being destructive and focus on learning by reading the most effective ways to prototype here.",
     },
     {
       title: "3. Iteration",
-      description: "Carry out the project while managing resources and timelines effectively.",
+      description: "Having to restart sucks and feels like a waste of time but all successful projects do it. You learn as you go but here is how you can not waste materials and money.",
     },
     {
       title: "4. Deliverables",
-      description: "Review the outcomes and processes for continuous improvement.",
+      description: "This is what the professor expects from you, or more explicitly this is what you will be graded on. Knowing what the class is about will make sure you don’t make any avoidable mistakes in the future.",
     },
   ];
 
